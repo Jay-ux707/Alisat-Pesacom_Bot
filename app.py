@@ -26,7 +26,7 @@ st.title("JI Operations & Dev Assistant")
 st.write("Managing PESACOM Finance & Software Engineering Projects.")
 
 # Hardcoded API Details
-API_KEY = "AQ.Ab8RN6KKxmqSCkV5ACoJlnNlHBPh2VER3KfKt0bQ6MbFePg6JA"
+API_KEY = "AQ.Ab8RN6LPpJgJvcG-2B-MrJJQZtJsQjELAl8zyrje-HXKTShGwAn"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={API_KEY}"
 
 SYSTEM_INSTRUCTION = """
