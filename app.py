@@ -25,9 +25,9 @@ st.markdown("""
 st.title("JI Operations & Dev Assistant")
 st.write("Managing PESACOM Finance & Software Engineering Projects.")
 
-# Hardcoded API Details
+# Updated API Details with your fresh key
 API_KEY = "AQ.Ab8RN6LPpJgJvcG-2B-MrJJQZtJsQjELAl8zyrje-HXKTShGwAn"
-URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={API_KEY}"
+URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
 
 SYSTEM_INSTRUCTION = """
 You are the official Digital Operations Manager for PESACOM Finance, based in Uganda. 
@@ -80,6 +80,6 @@ if prompt := st.chat_input("Ask [DEV] for code or [BIZ] for business help..."):
                     st.session_state.messages.append({"role": "assistant", "content": bot_response})
                     st.session_state.api_history.append({"role": "model", "parts": [{"text": bot_response}]})
                 else:
-                    st.error(f"API Error ({response.status_code})")
+                    st.error(f"API Error ({response.status_code}): {response.text}")
             except Exception as e:
                 st.error(f"Connection Error: {e}")
